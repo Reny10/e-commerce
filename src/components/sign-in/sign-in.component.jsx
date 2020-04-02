@@ -29,7 +29,6 @@ return(
 <form onSubmit={this.handleSubmit}>
 <FormInput name="email" type="email" handleChange={this.handleChange} value={this.state.email} label="email" required/>
 <FormInput name="password" type="password" handleChange={this.handleChange} value={this.state.email} label="password" required/>
-label="password" required/>
 
 <div className='buttons'>
 <CustomButton type="submit">Sign in</CustomButton>
