@@ -15,7 +15,7 @@ class App extends React.Component {
 unsubscribeFromAuth = null;
 
  componentDidMount() {
-  const {setcurrentUser}=this.props;
+  const {setCurrentUser}=this.props;
    this.unsubscribeFromAuth =auth.onAuthStateChanged (async userAuth => {
    if (userAuth) {
     const userRef = await createUserProfileDocument(userAuth);
@@ -42,16 +42,14 @@ render(){
         <Route exact path='/checkout' component={CheckoutPage} />
         <Route exact path='/signin' render={() =>
           this.props.currentUser ? (<Redirect to='/' />) : (<SignInAndSignUpPage />)
-          } /> />
+          } /> 
       </Switch>
     </div>
   );
 }}
-
 const mapStateToProps = ({ user }) => ({
   currentUser: user.currentUser
 });
-
 const mapDispatchToProps = dispatch => ({
   setCurrentUser: user => dispatch(setCurrentUser(user))
 });

@@ -2,7 +2,6 @@ import firebase from 'firebase/app';
 import 'firebase/firestore';
 import 'firebase/auth';
 
-
 const config={
 apiKey: "AIzaSyDR8eWLwkXI8enlE0NcYsV72UiBhnR05oE",
 authDomain: "e-commerce-89710.firebaseapp.com",
@@ -11,7 +10,7 @@ projectId: "e-commerce-89710",
 storageBucket: "e-commerce-89710.appspot.com",
 messagingSenderId: "585846998468",
 appId: "1:585846998468:web:9f4e3f5b0134ee7b8c1091",
-measurementId: "G-VWJC7XC3SW"
+//measurementId: "G-VWJC7XC3SW"
 };
 firebase.initializeApp(config);
 
@@ -36,10 +35,8 @@ export const createUserProfileDocument = async (userAuth, additionalData) => {
       console.log('error creating user', error.message);
     }
   }
-
   return userRef;
 };
-
 export const auth = firebase.auth();
 export const firestore = firebase.firestore();
 
